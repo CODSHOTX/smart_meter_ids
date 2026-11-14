@@ -1,0 +1,15 @@
+---
+description: Smart meter attack detection project context
+alwaysApply: true
+---
+
+Project: Anomaly-based cyberattack detection for smart electricity meters.
+Scope: consumption-based attacks only. Python, pandas, scikit-learn, Streamlit.
+Data: London Smart Meters subset (50-200 meters, hourly) with synthetic injected attacks
+(scaling, zeroing, spikes, ramp-down). Labels and attack start times are recorded.
+Models: Isolation Forest (train on normal data only), Random Forest (class_weight='balanced'),
+z-score baseline.
+Rules: split train/test by TIME, never randomly. Keep code in src/ modules with docstrings.
+Metrics: accuracy, precision, recall, F1, false-alarm rate = FP/(FP+TN),
+detection latency = first flagged reading minus attack start.
+Keep it simple. No extra frameworks. Set random seeds for reproducibility.
