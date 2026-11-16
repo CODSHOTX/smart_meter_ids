@@ -166,6 +166,8 @@ All random processes use fixed seeds (`42`) for reproducibility.
 
 ## 7. Dashboard
 
+Full step-by-step usage guide: **[docs/dashboard_manual.md](docs/dashboard_manual.md)**.
+
 The Streamlit dashboard reads the generated files and provides:
 
 - **Controls:** model (Random Forest, Isolation Forest, Z-score), threshold variant (`f1` or `far2`), persistence `k`, meter, and date range. The default is Random Forest, far2, k = 2.
