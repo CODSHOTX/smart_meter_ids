@@ -81,6 +81,14 @@ Models are compared at the same false-alarm budget (`far2` threshold). The test 
 | Scaling | 0.458 | 87% | 6 h |
 | Ramp-down | 0.271 | 81% | 19 h |
 
+The recommended operating point is k=2, and its per-type breakdown shows a side effect that the overall 80% hides. Spikes are isolated hours, so requiring two consecutive flagged hours hurts them badly:
+
+RF, far2	k=1	k=2	k=3
+Spike windows detected	89%	56%	25%
+Zeroing	100%	100%	100%
+Scaling	87%	82%	77%
+Ramp-down	81%	76%	71%
+
 ### Key findings
 
 - Random Forest clearly outperforms the unsupervised models at equal false-alarm rates, and its validation-chosen threshold transferred to unseen months and unseen meters.
